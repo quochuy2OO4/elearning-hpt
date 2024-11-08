@@ -30,7 +30,7 @@ public class ClassRoom {
     private List<Student> students;
 
     // Relationship one to one. teacher_id on table class   to   id on lecturer
-    @OneToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "teacher_id", referencedColumnName = "id", nullable = false)
     private Lecturer lecturer;
 }

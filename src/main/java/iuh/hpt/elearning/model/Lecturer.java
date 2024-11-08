@@ -41,8 +41,8 @@ public class Lecturer {
     @Column(name = "degree", length = 20, nullable = false)
     private String degree;
 
-    @OneToOne(mappedBy = "lecturer")
-    private ClassRoom classRoom;
+    @OneToMany(mappedBy = "lecturer")
+    private List<ClassRoom> classRoom;
 
     @OneToMany(mappedBy = "lecturer")
     private List<TimeTable> timeTable;
